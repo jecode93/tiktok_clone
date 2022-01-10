@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tiktok_clone/widgets/bottomNavigationBar.dart';
+import 'package:tiktok_clone/widgets/carousel_slide.dart';
 
 class Home extends StatefulWidget {
   const Home({
@@ -13,8 +15,8 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Center(),
+      body: Carousel(),
+      bottomNavigationBar: const BottomNavBar(),
       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
