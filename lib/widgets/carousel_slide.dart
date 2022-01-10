@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:tiktok_clone/widgets/postContent.dart';
 
 import 'video_widget.dart';
 
@@ -45,6 +46,7 @@ class Carousel extends StatelessWidget {
                   VideoWidget(
                     videoUrl: item['videos'],
                   ),
+                  const PostContent(),
                 ],
               ),
             );
