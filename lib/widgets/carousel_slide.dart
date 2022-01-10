@@ -1,22 +1,30 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
+import 'video_widget.dart';
+
 class Carousel extends StatelessWidget {
   Carousel({Key? key}) : super(key: key);
 
   final List<Map> titkokItem = [
     {
-      'title': "1",
-      'color': Colors.blue,
+      'videos': "assets/videos/video_1.mp4",
     },
     {
-      'title': "2",
-      'color': Colors.greenAccent,
+      'videos': "assets/videos/video_2.mp4",
     },
     {
-      'title': "3",
-      'color': Colors.yellowAccent,
-    }
+      'videos': "assets/videos/video_3.mp4",
+    },
+    {
+      'videos': "assets/videos/video_4.mp4",
+    },
+    {
+      'videos': "assets/videos/video_5.mp4",
+    },
+    {
+      'videos': "assets/videos/video_6.mp4",
+    },
   ];
 
   @override
@@ -31,11 +39,13 @@ class Carousel extends StatelessWidget {
         return Builder(
           builder: (BuildContext context) {
             return Container(
-              color: item['color'],
-              child: Center(
-                child: Text(
-                  item['title'],
-                ),
+              color: const Color(0xFF141518),
+              child: Stack(
+                children: [
+                  VideoWidget(
+                    videoUrl: item['videos'],
+                  ),
+                ],
               ),
             );
           },
